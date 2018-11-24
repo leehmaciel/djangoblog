@@ -1,0 +1,31 @@
+h3 a{
+	color: #D490CB;
+	font-family: 'Lobster';
+}
+
+h1{
+	color: #ffff;
+	font-family: 'Lobster';
+}
+
+.header{
+	background-color: #DE8A6F;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.post{
+	margin-bottom: 50px;
+	margin-left: 40px;
+}
+
+.date{
+	color: #8123A1;
+	font-size: 11px;
+}
+
+.text{
+	
+}

@@ -1,26 +1,15 @@
-<html>
-	<head>
-		<title>My first Django blog</title>
+{% extends 'blog/base.html' %}
 
-	</head>
-	
-	<body>
-		<div>
-			<h1>Welcome to my blog!</h1>
+{% block content %}
+	{% for post in posts %}
+		<div class="post">
+			<h3><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h3>
+			<div class = "text">
+				<p>{{post.text|linebreaksbr}}</p>
+			</div>
+			<div class = "date">
+				<p>publicado em: {{post.published_date}}</p>
+			</div>
 		</div>
-
-		<div>
-			<h2> Meus posts </h3>
-			
-			{% for post in posts %}
-				<div>
-					<p>publicado em: {{post.published_date}}</p>
-					<h3><a href="">{{post.title}}</a></h3>
-					<p>{{post.text|linebreaksbr}}</p>
-				</div>
-			{% endfor %}
-		</div>
-
-	</body>
-
-</html>
+	{% endfor %}
+{% endblock %}
