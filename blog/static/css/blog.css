@@ -8,12 +8,17 @@ h1{
 	font-family: 'Lobster';
 }
 
+.top-menu{
+	align-self: flex-end;
+}
+
 .header{
 	background-color: #DE8A6F;
 	height: 60px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: row;
 }
 
 .post{

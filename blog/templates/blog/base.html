@@ -14,7 +14,15 @@
 	
 	<body>
 		<div class="header">
-		<h1><href="">Welcome to my blog!</h1>
+			<h1>
+				Welcome to my blog!
+				{% if user.is_authenticated %}
+					<a href="{% url 'post_new' %}" class="top-menu">
+					<span class="glyphicon glyphicon-plus">
+					</span>
+					</a>
+				{% endif %}
+			</h1>
 		</div>
 
 		<div>
