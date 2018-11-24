@@ -8,8 +8,19 @@
 		<div>
 			<h1>Welcome to my blog!</h1>
 		</div>
-		
-		<p> Aprendendo Django no Django Girls!!! </p>
+
+		<div>
+			<h2> Meus posts </h3>
+			
+			{% for post in posts %}
+				<div>
+					<p>publicado em: {{post.published_date}}</p>
+					<h3><a href="">{{post.title}}</a></h3>
+					<p>{{post.text|linebreaksbr}}</p>
+				</div>
+			{% endfor %}
+		</div>
+
 	</body>
 
 </html>
